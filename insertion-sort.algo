@@ -1,0 +1,25 @@
+PROCEDURE SWAP(VAR xp, VAR yp : INTEGER)
+VAR
+   tmp : INTEGER;
+BEGIN
+  tmp := xp;
+  xp := yp;
+  yp := tmp;
+END
+
+ALGORITHM algorithm_name
+VAR
+    A : ARRAY_OF INTEGER[];
+    i,j : INTEGER;
+BEGIN
+    A := [1,5,2,8]
+    i:=1
+    WHILE (i< A.length) DO
+        j:=i 
+        WHILE (j>0 AND A[j] < A[j-1] ) DO
+            SWAP (A[j],A[j-1])
+            j:=j-1
+        END_WHILE
+    i= i +1
+    END_WHILE
+END
